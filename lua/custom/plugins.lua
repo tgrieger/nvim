@@ -1,9 +1,22 @@
 local overrides = require("custom.configs.overrides")
+local cmp = require "cmp"
 
 ---@type NvPluginSpec[]
 local plugins = {
 
   -- Override plugin definition options
+
+  {
+    "hrsh7th/nvim-cmp",
+    opts = {
+      mapping = {
+        ["<Tab>"] = cmp.mapping.confirm {
+          behavior = cmp.ConfirmBehavior.Insert,
+          select = true,
+        },
+      }
+    }
+  },
 
   {
     "neovim/nvim-lspconfig",
@@ -59,8 +72,11 @@ local plugins = {
   {
     "nvim-treesitter/playground",
     cmd = "TSCaptureUnderCursor"
-  }
+  },
 
+  {
+    "Issafalcon/lsp-overloads.nvim"
+  }
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
