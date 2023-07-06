@@ -16,3 +16,4 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 vim.wo.relativenumber = true
+vim.o.scrolloff = 15
