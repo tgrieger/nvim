@@ -56,6 +56,14 @@ M.nvimtree = {
       },
     },
   },
+
+  view = {
+    mappings = {
+      list = {
+        { key = "<C-q>", action = "vsplit" }
+      }
+    }
+  }
 }
 
 M.nvterm = {
