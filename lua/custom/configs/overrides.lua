@@ -37,6 +37,8 @@ M.mason = {
     -- c/cpp stuff
     "clangd",
     "clang-format",
+
+    "omnisharp"
   },
 }
 
@@ -54,6 +56,12 @@ M.nvimtree = {
       },
     },
   },
+}
+
+M.nvterm = {
+  terminals = {
+    shell = "powershell"
+  }
 }
 
 return M
